@@ -1,0 +1,997 @@
+<html lang="en">
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.5.0/css/fileinput.min.css" media="all" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="/css/app.css">
+<body>
+
+    
+<header id="header">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+                <img src="/img/logo.png" alt="">
+            </a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="#">IP Programs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Resources</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/service-providers.html">Service Providers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Office hours with IP Experts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/ip-events.html">IP Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Assessment Tool</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="ms-auto right-menu">
+                <img src="/img/search.svg" alt="Search Icon">
+                <a href="/login.html" class="btn btn-outline-success">Login</a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+</header>
+
+    <section class="page-admin">
+    <div class="container">
+        <div class="buttons d-flex justify-content-between">
+            <a href="/ip-events-add.html" class="btn btn-success text-uppercase">Add new event
+                <svg class="ms-2" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="Plus &#38; Minus">
+                        <path id="Vector 8" d="M8.78338 2C8.78338 1.55817 8.42521 1.2 7.98338 1.2C7.54155 1.2 7.18338 1.55817 7.18338 2H8.78338ZM7.18338 14C7.18338 14.4418 7.54155 14.8 7.98338 14.8C8.42521 14.8 8.78338 14.4418 8.78338 14H7.18338ZM2 7.2C1.55817 7.2 1.2 7.55817 1.2 8C1.2 8.44183 1.55817 8.8 2 8.8V7.2ZM14 8.8C14.4418 8.8 14.8 8.44183 14.8 8C14.8 7.55817 14.4418 7.2 14 7.2V8.8ZM7.18338 2V8H8.78338V2H7.18338ZM7.18338 8V14H8.78338V8H7.18338ZM7.98338 7.2H2V8.8H7.98338V7.2ZM2 8.8H14V7.2H2V8.8Z" fill="white"/>
+                    </g>
+                </svg>
+            </a>
+            <a href="/ip-events-edit.html" class="btn btn-outline-success text-uppercase">Edit events
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="ms-2">
+                    <g id="Edit">
+                        <path id="Icon" d="M13.5118 2.48816L13.9832 2.01675V2.01675L13.5118 2.48816ZM4.33333 14.0237V14.6903C4.51014 14.6903 4.67971 14.6201 4.80474 14.4951L4.33333 14.0237ZM2 14.0237H1.33333C1.33333 14.3918 1.63181 14.6903 2 14.6903V14.0237ZM2 11.6429L1.5286 11.1715C1.40357 11.2966 1.33333 11.4661 1.33333 11.6429H2ZM11.6262 2.95956C12.0167 2.56904 12.6499 2.56904 13.0404 2.95956L13.9832 2.01675C13.072 1.10553 11.5946 1.10553 10.6834 2.01675L11.6262 2.95956ZM13.0404 2.95956C13.4309 3.35008 13.4309 3.98325 13.0404 4.37377L13.9832 5.31658C14.8944 4.40536 14.8944 2.92797 13.9832 2.01675L13.0404 2.95956ZM13.0404 4.37377L3.86193 13.5522L4.80474 14.4951L13.9832 5.31658L13.0404 4.37377ZM4.33333 13.357H2V14.6903H4.33333V13.357ZM10.6834 2.01675L1.5286 11.1715L2.4714 12.1143L11.6262 2.95956L10.6834 2.01675ZM1.33333 11.6429V14.0237H2.66667V11.6429H1.33333ZM9.68338 3.95956L12.0404 6.31658L12.9832 5.37377L10.6262 3.01675L9.68338 3.95956Z" fill="#00AB8E"/>
+                    </g>
+                </svg>
+            </a>
+        </div>
+        <div class="top-bar">
+            <h1 class="mb-0">Explore All Events</h1>
+            <form action="" class="m-0">
+                <div class="form-floating">
+                    <input name="keyword" type="text"
+                           class="form-control" id="keyword"
+                           placeholder="Search events">
+                    <label for="keyword">Search events</label>
+                    <button id="btn-search" type="submit">
+                        <img src="./img/search-input.svg" alt="">
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div class="d-flex justify-content-between align-items-center  my-32">
+                <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active"
+                                id="pills-events-tab"
+                                data-bs-toggle="pill"
+                                data-bs-target="#pills-events"
+                                type="button"
+                                role="tab"
+                                aria-controls="pills-events"
+                                aria-selected="true">All Events</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link"
+                                id="pills-virtual-tab"
+                                data-bs-toggle="pill"
+                                data-bs-target="#pills-virtual"
+                                type="button"
+                                role="tab"
+                                aria-controls="pills-virtual"
+                                aria-selected="false">Virtual</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link"
+                                id="pills-person-tab"
+                                data-bs-toggle="pill"
+                                data-bs-target="#pills-person"
+                                type="button" role="tab"
+                                aria-controls="pills-person"
+                                aria-selected="false">In Person</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link"
+                                id="pills-upcoming-tab"
+                                data-bs-toggle="pill"
+                                data-bs-target="#pills-upcoming"
+                                type="button"
+                                role="tab"
+                                aria-controls="pills-upcoming"
+                                aria-selected="false">Upcoming</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link"
+                                id="pills-past-tab"
+                                data-bs-toggle="pill"
+                                data-bs-target="#pills-past"
+                                type="button"
+                                role="tab"
+                                aria-controls="pills-past"
+                                aria-selected="false">Past</button>
+                    </li>
+                </ul>
+                <div id="filter">
+                    Show results <span>by City</span>
+                </div>
+        </div>
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active"
+                         id="pills-events"
+                         role="tabpanel" aria-labelledby="pills-events-tab"
+                         tabindex="0">
+                        
+                            
+                            
+                            <div class="event-card card mb-3">
+    <div class="row g-0">
+        <div class="col-md-2">
+            <div class="position-relative">
+                <img src="./img/placeholder.svg" class="event-img img-fluid rounded-start w-100" alt="...">
+                    
+                        <span class="badge badge-person">In person</span>
+                    
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="card-body">
+                
+                    <a href="/ip-events-edit.html">
+                    <span class="badge badge-edit">Edit</span>
+                    </a>
+                
+                <h3 class="card-title">Tech Conference 2024</h3>
+                <p class="date">2024-07-15 10:00 AM - 4:00 PM</p>
+                <address>
+                    <a class="link" target="_blank" href="http://maps.google.com/?q=123 Innovation Drive, Tech City">123 Innovation Drive, Tech City</a>
+                </address>
+                <p class="event-description">Have an idea for commercialization? Working on a new invention? Join Michael Damiani, Patent Lawyer from Borden Ladner Gervais in an interactive session on how to best utilize your IP for your business and the different ways to protect it.</p>
+                <a href="/event.html" class="btn btn-outline-success">View event details</a>
+            </div>
+        </div>
+    </div>
+</div>
+                        
+                            
+                            
+                            <div class="event-card card mb-3">
+    <div class="row g-0">
+        <div class="col-md-2">
+            <div class="position-relative">
+                <img src="./img/event.png" class="event-img img-fluid rounded-start w-100" alt="...">
+                    
+                        <span class="badge badge-virtual">Virtual</span>
+                    
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="card-body">
+                
+                    <a href="/ip-events-edit.html">
+                    <span class="badge badge-edit">Edit</span>
+                    </a>
+                
+                <h3 class="card-title">Startup Pitch Night</h3>
+                <p class="date">2024-08-05 6:00 PM - 9:00 PM</p>
+                <address>
+                    <a class="link" target="_blank" href="http://maps.google.com/?q=456 Startup Blvd, Entrepreneur Hub">456 Startup Blvd, Entrepreneur Hub</a>
+                </address>
+                <p class="event-description">Watch startups pitch their ideas to a panel of investors and compete for funding.</p>
+                <a href="/event.html" class="btn btn-outline-success">View event details</a>
+            </div>
+        </div>
+    </div>
+</div>
+                        
+                            
+                            
+                            <div class="event-card card mb-3">
+    <div class="row g-0">
+        <div class="col-md-2">
+            <div class="position-relative">
+                <img src="./img/event.png" class="event-img img-fluid rounded-start w-100" alt="...">
+                    
+                        <span class="badge badge-person">In person</span>
+                    
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="card-body">
+                
+                    <a href="/ip-events-edit.html">
+                    <span class="badge badge-edit">Edit</span>
+                    </a>
+                
+                <h3 class="card-title">AI Workshop</h3>
+                <p class="date">2024-09-10 9:00 AM - 3:00 PM</p>
+                <address>
+                    <a class="link" target="_blank" href="http://maps.google.com/?q=789 AI Lane, Innovation Park">789 AI Lane, Innovation Park</a>
+                </address>
+                <p class="event-description">A hands-on workshop exploring the applications of artificial intelligence in various industries.</p>
+                <a href="/event.html" class="btn btn-outline-success">View event details</a>
+            </div>
+        </div>
+    </div>
+</div>
+                        
+                            
+                            
+                            <div class="event-card card mb-3">
+    <div class="row g-0">
+        <div class="col-md-2">
+            <div class="position-relative">
+                <img src="./img/placeholder.svg" class="event-img img-fluid rounded-start w-100" alt="...">
+                    
+                        <span class="badge badge-virtual">Virtual</span>
+                    
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="card-body">
+                
+                    <a href="/ip-events-edit.html">
+                    <span class="badge badge-edit">Edit</span>
+                    </a>
+                
+                <h3 class="card-title">Green Energy Summit</h3>
+                <p class="date">2024-10-22 8:00 AM - 5:00 PM</p>
+                <address>
+                    <a class="link" target="_blank" href="http://maps.google.com/?q=101 Renewable Way, Eco City">101 Renewable Way, Eco City</a>
+                </address>
+                <p class="event-description">Discover the latest trends and technologies in renewable energy at the Green Energy Summit.</p>
+                <a href="/event.html" class="btn btn-outline-success">View event details</a>
+            </div>
+        </div>
+    </div>
+</div>
+                        
+                            
+                            
+                            <div class="event-card card mb-3">
+    <div class="row g-0">
+        <div class="col-md-2">
+            <div class="position-relative">
+                <img src="./img/placeholder.svg" class="event-img img-fluid rounded-start w-100" alt="...">
+                    
+                        <span class="badge badge-person">In person</span>
+                    
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="card-body">
+                
+                    <a href="/ip-events-edit.html">
+                    <span class="badge badge-edit">Edit</span>
+                    </a>
+                
+                <h3 class="card-title">Blockchain Expo</h3>
+                <p class="date">2024-11-18 11:00 AM - 6:00 PM</p>
+                <address>
+                    <a class="link" target="_blank" href="http://maps.google.com/?q=202 Crypto Street, Fintech District">202 Crypto Street, Fintech District</a>
+                </address>
+                <p class="event-description">Explore the world of blockchain technology and its impact on various sectors.</p>
+                <a href="/event.html" class="btn btn-outline-success">View event details</a>
+            </div>
+        </div>
+    </div>
+</div>
+                        
+                            
+                            
+                            <div class="event-card card mb-3">
+    <div class="row g-0">
+        <div class="col-md-2">
+            <div class="position-relative">
+                <img src="./img/placeholder.svg" class="event-img img-fluid rounded-start w-100" alt="...">
+                    
+                        <span class="badge badge-virtual">Virtual</span>
+                    
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="card-body">
+                
+                    <a href="/ip-events-edit.html">
+                    <span class="badge badge-edit">Edit</span>
+                    </a>
+                
+                <h3 class="card-title">HealthTech Conference</h3>
+                <p class="date">2024-12-12 9:00 AM - 5:00 PM</p>
+                <address>
+                    <a class="link" target="_blank" href="http://maps.google.com/?q=303 Health Ave, Medical City">303 Health Ave, Medical City</a>
+                </address>
+                <p class="event-description">Join leading experts and innovators in the health technology industry for a day of learning and networking.</p>
+                <a href="/event.html" class="btn btn-outline-success">View event details</a>
+            </div>
+        </div>
+    </div>
+</div>
+                        
+                    </div>
+                    <div class="tab-pane fade"
+                         id="pills-virtual"
+                         role="tabpanel"
+                         aria-labelledby="pills-virtual-tab" tabindex="0">
+                        
+                            
+                        
+                            
+                                
+                                
+                                <div class="event-card card mb-3">
+    <div class="row g-0">
+        <div class="col-md-2">
+            <div class="position-relative">
+                <img src="./img/event.png" class="event-img img-fluid rounded-start w-100" alt="...">
+                    
+                        <span class="badge badge-virtual">Virtual</span>
+                    
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="card-body">
+                
+                    <a href="/ip-events-edit.html">
+                    <span class="badge badge-edit">Edit</span>
+                    </a>
+                
+                <h3 class="card-title">Startup Pitch Night</h3>
+                <p class="date">2024-08-05 6:00 PM - 9:00 PM</p>
+                <address>
+                    <a class="link" target="_blank" href="http://maps.google.com/?q=456 Startup Blvd, Entrepreneur Hub">456 Startup Blvd, Entrepreneur Hub</a>
+                </address>
+                <p class="event-description">Watch startups pitch their ideas to a panel of investors and compete for funding.</p>
+                <a href="/event.html" class="btn btn-outline-success">View event details</a>
+            </div>
+        </div>
+    </div>
+</div>
+                            
+                        
+                            
+                        
+                            
+                                
+                                
+                                <div class="event-card card mb-3">
+    <div class="row g-0">
+        <div class="col-md-2">
+            <div class="position-relative">
+                <img src="./img/placeholder.svg" class="event-img img-fluid rounded-start w-100" alt="...">
+                    
+                        <span class="badge badge-virtual">Virtual</span>
+                    
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="card-body">
+                
+                    <a href="/ip-events-edit.html">
+                    <span class="badge badge-edit">Edit</span>
+                    </a>
+                
+                <h3 class="card-title">Green Energy Summit</h3>
+                <p class="date">2024-10-22 8:00 AM - 5:00 PM</p>
+                <address>
+                    <a class="link" target="_blank" href="http://maps.google.com/?q=101 Renewable Way, Eco City">101 Renewable Way, Eco City</a>
+                </address>
+                <p class="event-description">Discover the latest trends and technologies in renewable energy at the Green Energy Summit.</p>
+                <a href="/event.html" class="btn btn-outline-success">View event details</a>
+            </div>
+        </div>
+    </div>
+</div>
+                            
+                        
+                            
+                        
+                            
+                                
+                                
+                                <div class="event-card card mb-3">
+    <div class="row g-0">
+        <div class="col-md-2">
+            <div class="position-relative">
+                <img src="./img/placeholder.svg" class="event-img img-fluid rounded-start w-100" alt="...">
+                    
+                        <span class="badge badge-virtual">Virtual</span>
+                    
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="card-body">
+                
+                    <a href="/ip-events-edit.html">
+                    <span class="badge badge-edit">Edit</span>
+                    </a>
+                
+                <h3 class="card-title">HealthTech Conference</h3>
+                <p class="date">2024-12-12 9:00 AM - 5:00 PM</p>
+                <address>
+                    <a class="link" target="_blank" href="http://maps.google.com/?q=303 Health Ave, Medical City">303 Health Ave, Medical City</a>
+                </address>
+                <p class="event-description">Join leading experts and innovators in the health technology industry for a day of learning and networking.</p>
+                <a href="/event.html" class="btn btn-outline-success">View event details</a>
+            </div>
+        </div>
+    </div>
+</div>
+                            
+                        
+                    </div>
+                    <div class="tab-pane fade"
+                         id="pills-person"
+                         role="tabpanel"
+                         aria-labelledby="pills-person-tab"
+                         tabindex="0">
+                        
+                            
+                                
+                                
+                                <div class="event-card card mb-3">
+    <div class="row g-0">
+        <div class="col-md-2">
+            <div class="position-relative">
+                <img src="./img/placeholder.svg" class="event-img img-fluid rounded-start w-100" alt="...">
+                    
+                        <span class="badge badge-person">In person</span>
+                    
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="card-body">
+                
+                    <a href="/ip-events-edit.html">
+                    <span class="badge badge-edit">Edit</span>
+                    </a>
+                
+                <h3 class="card-title">Tech Conference 2024</h3>
+                <p class="date">2024-07-15 10:00 AM - 4:00 PM</p>
+                <address>
+                    <a class="link" target="_blank" href="http://maps.google.com/?q=123 Innovation Drive, Tech City">123 Innovation Drive, Tech City</a>
+                </address>
+                <p class="event-description">Have an idea for commercialization? Working on a new invention? Join Michael Damiani, Patent Lawyer from Borden Ladner Gervais in an interactive session on how to best utilize your IP for your business and the different ways to protect it.</p>
+                <a href="/event.html" class="btn btn-outline-success">View event details</a>
+            </div>
+        </div>
+    </div>
+</div>
+                            
+                        
+                            
+                        
+                            
+                                
+                                
+                                <div class="event-card card mb-3">
+    <div class="row g-0">
+        <div class="col-md-2">
+            <div class="position-relative">
+                <img src="./img/event.png" class="event-img img-fluid rounded-start w-100" alt="...">
+                    
+                        <span class="badge badge-person">In person</span>
+                    
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="card-body">
+                
+                    <a href="/ip-events-edit.html">
+                    <span class="badge badge-edit">Edit</span>
+                    </a>
+                
+                <h3 class="card-title">AI Workshop</h3>
+                <p class="date">2024-09-10 9:00 AM - 3:00 PM</p>
+                <address>
+                    <a class="link" target="_blank" href="http://maps.google.com/?q=789 AI Lane, Innovation Park">789 AI Lane, Innovation Park</a>
+                </address>
+                <p class="event-description">A hands-on workshop exploring the applications of artificial intelligence in various industries.</p>
+                <a href="/event.html" class="btn btn-outline-success">View event details</a>
+            </div>
+        </div>
+    </div>
+</div>
+                            
+                        
+                            
+                        
+                            
+                                
+                                
+                                <div class="event-card card mb-3">
+    <div class="row g-0">
+        <div class="col-md-2">
+            <div class="position-relative">
+                <img src="./img/placeholder.svg" class="event-img img-fluid rounded-start w-100" alt="...">
+                    
+                        <span class="badge badge-person">In person</span>
+                    
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="card-body">
+                
+                    <a href="/ip-events-edit.html">
+                    <span class="badge badge-edit">Edit</span>
+                    </a>
+                
+                <h3 class="card-title">Blockchain Expo</h3>
+                <p class="date">2024-11-18 11:00 AM - 6:00 PM</p>
+                <address>
+                    <a class="link" target="_blank" href="http://maps.google.com/?q=202 Crypto Street, Fintech District">202 Crypto Street, Fintech District</a>
+                </address>
+                <p class="event-description">Explore the world of blockchain technology and its impact on various sectors.</p>
+                <a href="/event.html" class="btn btn-outline-success">View event details</a>
+            </div>
+        </div>
+    </div>
+</div>
+                            
+                        
+                            
+                        
+                    </div>
+                    <div class="tab-pane fade"
+                         id="pills-upcoming"
+                         role="tabpanel"
+                         aria-labelledby="pills-upcoming-tab"
+                         tabindex="0">
+                        
+                            
+                            
+                            <div class="event-card card mb-3">
+    <div class="row g-0">
+        <div class="col-md-2">
+            <div class="position-relative">
+                <img src="./img/placeholder.svg" class="event-img img-fluid rounded-start w-100" alt="...">
+                    
+                        <span class="badge badge-person">In person</span>
+                    
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="card-body">
+                
+                    <a href="/ip-events-edit.html">
+                    <span class="badge badge-edit">Edit</span>
+                    </a>
+                
+                <h3 class="card-title">Tech Conference 2024</h3>
+                <p class="date">2024-07-15 10:00 AM - 4:00 PM</p>
+                <address>
+                    <a class="link" target="_blank" href="http://maps.google.com/?q=123 Innovation Drive, Tech City">123 Innovation Drive, Tech City</a>
+                </address>
+                <p class="event-description">Have an idea for commercialization? Working on a new invention? Join Michael Damiani, Patent Lawyer from Borden Ladner Gervais in an interactive session on how to best utilize your IP for your business and the different ways to protect it.</p>
+                <a href="/event.html" class="btn btn-outline-success">View event details</a>
+            </div>
+        </div>
+    </div>
+</div>
+                        
+                            
+                            
+                            <div class="event-card card mb-3">
+    <div class="row g-0">
+        <div class="col-md-2">
+            <div class="position-relative">
+                <img src="./img/event.png" class="event-img img-fluid rounded-start w-100" alt="...">
+                    
+                        <span class="badge badge-virtual">Virtual</span>
+                    
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="card-body">
+                
+                    <a href="/ip-events-edit.html">
+                    <span class="badge badge-edit">Edit</span>
+                    </a>
+                
+                <h3 class="card-title">Startup Pitch Night</h3>
+                <p class="date">2024-08-05 6:00 PM - 9:00 PM</p>
+                <address>
+                    <a class="link" target="_blank" href="http://maps.google.com/?q=456 Startup Blvd, Entrepreneur Hub">456 Startup Blvd, Entrepreneur Hub</a>
+                </address>
+                <p class="event-description">Watch startups pitch their ideas to a panel of investors and compete for funding.</p>
+                <a href="/event.html" class="btn btn-outline-success">View event details</a>
+            </div>
+        </div>
+    </div>
+</div>
+                        
+                            
+                            
+                            <div class="event-card card mb-3">
+    <div class="row g-0">
+        <div class="col-md-2">
+            <div class="position-relative">
+                <img src="./img/event.png" class="event-img img-fluid rounded-start w-100" alt="...">
+                    
+                        <span class="badge badge-person">In person</span>
+                    
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="card-body">
+                
+                    <a href="/ip-events-edit.html">
+                    <span class="badge badge-edit">Edit</span>
+                    </a>
+                
+                <h3 class="card-title">AI Workshop</h3>
+                <p class="date">2024-09-10 9:00 AM - 3:00 PM</p>
+                <address>
+                    <a class="link" target="_blank" href="http://maps.google.com/?q=789 AI Lane, Innovation Park">789 AI Lane, Innovation Park</a>
+                </address>
+                <p class="event-description">A hands-on workshop exploring the applications of artificial intelligence in various industries.</p>
+                <a href="/event.html" class="btn btn-outline-success">View event details</a>
+            </div>
+        </div>
+    </div>
+</div>
+                        
+                            
+                            
+                            <div class="event-card card mb-3">
+    <div class="row g-0">
+        <div class="col-md-2">
+            <div class="position-relative">
+                <img src="./img/placeholder.svg" class="event-img img-fluid rounded-start w-100" alt="...">
+                    
+                        <span class="badge badge-virtual">Virtual</span>
+                    
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="card-body">
+                
+                    <a href="/ip-events-edit.html">
+                    <span class="badge badge-edit">Edit</span>
+                    </a>
+                
+                <h3 class="card-title">Green Energy Summit</h3>
+                <p class="date">2024-10-22 8:00 AM - 5:00 PM</p>
+                <address>
+                    <a class="link" target="_blank" href="http://maps.google.com/?q=101 Renewable Way, Eco City">101 Renewable Way, Eco City</a>
+                </address>
+                <p class="event-description">Discover the latest trends and technologies in renewable energy at the Green Energy Summit.</p>
+                <a href="/event.html" class="btn btn-outline-success">View event details</a>
+            </div>
+        </div>
+    </div>
+</div>
+                        
+                            
+                            
+                            <div class="event-card card mb-3">
+    <div class="row g-0">
+        <div class="col-md-2">
+            <div class="position-relative">
+                <img src="./img/placeholder.svg" class="event-img img-fluid rounded-start w-100" alt="...">
+                    
+                        <span class="badge badge-person">In person</span>
+                    
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="card-body">
+                
+                    <a href="/ip-events-edit.html">
+                    <span class="badge badge-edit">Edit</span>
+                    </a>
+                
+                <h3 class="card-title">Blockchain Expo</h3>
+                <p class="date">2024-11-18 11:00 AM - 6:00 PM</p>
+                <address>
+                    <a class="link" target="_blank" href="http://maps.google.com/?q=202 Crypto Street, Fintech District">202 Crypto Street, Fintech District</a>
+                </address>
+                <p class="event-description">Explore the world of blockchain technology and its impact on various sectors.</p>
+                <a href="/event.html" class="btn btn-outline-success">View event details</a>
+            </div>
+        </div>
+    </div>
+</div>
+                        
+                            
+                            
+                            <div class="event-card card mb-3">
+    <div class="row g-0">
+        <div class="col-md-2">
+            <div class="position-relative">
+                <img src="./img/placeholder.svg" class="event-img img-fluid rounded-start w-100" alt="...">
+                    
+                        <span class="badge badge-virtual">Virtual</span>
+                    
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="card-body">
+                
+                    <a href="/ip-events-edit.html">
+                    <span class="badge badge-edit">Edit</span>
+                    </a>
+                
+                <h3 class="card-title">HealthTech Conference</h3>
+                <p class="date">2024-12-12 9:00 AM - 5:00 PM</p>
+                <address>
+                    <a class="link" target="_blank" href="http://maps.google.com/?q=303 Health Ave, Medical City">303 Health Ave, Medical City</a>
+                </address>
+                <p class="event-description">Join leading experts and innovators in the health technology industry for a day of learning and networking.</p>
+                <a href="/event.html" class="btn btn-outline-success">View event details</a>
+            </div>
+        </div>
+    </div>
+</div>
+                        
+                    </div>
+                    <div class="tab-pane fade"
+                         id="pills-past"
+                         role="tabpanel"
+                         aria-labelledby="pills-past-tab"
+                         tabindex="0">
+                        
+                            
+                            
+                            <div class="event-card card mb-3">
+    <div class="row g-0">
+        <div class="col-md-2">
+            <div class="position-relative">
+                <img src="./img/placeholder.svg" class="event-img img-fluid rounded-start w-100" alt="...">
+                    
+                        <span class="badge badge-person">In person</span>
+                    
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="card-body">
+                
+                    <a href="/ip-events-edit.html">
+                    <span class="badge badge-edit">Edit</span>
+                    </a>
+                
+                <h3 class="card-title">Tech Conference 2024</h3>
+                <p class="date">2024-07-15 10:00 AM - 4:00 PM</p>
+                <address>
+                    <a class="link" target="_blank" href="http://maps.google.com/?q=123 Innovation Drive, Tech City">123 Innovation Drive, Tech City</a>
+                </address>
+                <p class="event-description">Have an idea for commercialization? Working on a new invention? Join Michael Damiani, Patent Lawyer from Borden Ladner Gervais in an interactive session on how to best utilize your IP for your business and the different ways to protect it.</p>
+                <a href="/event.html" class="btn btn-outline-success">View event details</a>
+            </div>
+        </div>
+    </div>
+</div>
+                        
+                            
+                            
+                            <div class="event-card card mb-3">
+    <div class="row g-0">
+        <div class="col-md-2">
+            <div class="position-relative">
+                <img src="./img/event.png" class="event-img img-fluid rounded-start w-100" alt="...">
+                    
+                        <span class="badge badge-virtual">Virtual</span>
+                    
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="card-body">
+                
+                    <a href="/ip-events-edit.html">
+                    <span class="badge badge-edit">Edit</span>
+                    </a>
+                
+                <h3 class="card-title">Startup Pitch Night</h3>
+                <p class="date">2024-08-05 6:00 PM - 9:00 PM</p>
+                <address>
+                    <a class="link" target="_blank" href="http://maps.google.com/?q=456 Startup Blvd, Entrepreneur Hub">456 Startup Blvd, Entrepreneur Hub</a>
+                </address>
+                <p class="event-description">Watch startups pitch their ideas to a panel of investors and compete for funding.</p>
+                <a href="/event.html" class="btn btn-outline-success">View event details</a>
+            </div>
+        </div>
+    </div>
+</div>
+                        
+                            
+                            
+                            <div class="event-card card mb-3">
+    <div class="row g-0">
+        <div class="col-md-2">
+            <div class="position-relative">
+                <img src="./img/event.png" class="event-img img-fluid rounded-start w-100" alt="...">
+                    
+                        <span class="badge badge-person">In person</span>
+                    
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="card-body">
+                
+                    <a href="/ip-events-edit.html">
+                    <span class="badge badge-edit">Edit</span>
+                    </a>
+                
+                <h3 class="card-title">AI Workshop</h3>
+                <p class="date">2024-09-10 9:00 AM - 3:00 PM</p>
+                <address>
+                    <a class="link" target="_blank" href="http://maps.google.com/?q=789 AI Lane, Innovation Park">789 AI Lane, Innovation Park</a>
+                </address>
+                <p class="event-description">A hands-on workshop exploring the applications of artificial intelligence in various industries.</p>
+                <a href="/event.html" class="btn btn-outline-success">View event details</a>
+            </div>
+        </div>
+    </div>
+</div>
+                        
+                            
+                            
+                            <div class="event-card card mb-3">
+    <div class="row g-0">
+        <div class="col-md-2">
+            <div class="position-relative">
+                <img src="./img/placeholder.svg" class="event-img img-fluid rounded-start w-100" alt="...">
+                    
+                        <span class="badge badge-virtual">Virtual</span>
+                    
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="card-body">
+                
+                    <a href="/ip-events-edit.html">
+                    <span class="badge badge-edit">Edit</span>
+                    </a>
+                
+                <h3 class="card-title">Green Energy Summit</h3>
+                <p class="date">2024-10-22 8:00 AM - 5:00 PM</p>
+                <address>
+                    <a class="link" target="_blank" href="http://maps.google.com/?q=101 Renewable Way, Eco City">101 Renewable Way, Eco City</a>
+                </address>
+                <p class="event-description">Discover the latest trends and technologies in renewable energy at the Green Energy Summit.</p>
+                <a href="/event.html" class="btn btn-outline-success">View event details</a>
+            </div>
+        </div>
+    </div>
+</div>
+                        
+                            
+                            
+                            <div class="event-card card mb-3">
+    <div class="row g-0">
+        <div class="col-md-2">
+            <div class="position-relative">
+                <img src="./img/placeholder.svg" class="event-img img-fluid rounded-start w-100" alt="...">
+                    
+                        <span class="badge badge-person">In person</span>
+                    
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="card-body">
+                
+                    <a href="/ip-events-edit.html">
+                    <span class="badge badge-edit">Edit</span>
+                    </a>
+                
+                <h3 class="card-title">Blockchain Expo</h3>
+                <p class="date">2024-11-18 11:00 AM - 6:00 PM</p>
+                <address>
+                    <a class="link" target="_blank" href="http://maps.google.com/?q=202 Crypto Street, Fintech District">202 Crypto Street, Fintech District</a>
+                </address>
+                <p class="event-description">Explore the world of blockchain technology and its impact on various sectors.</p>
+                <a href="/event.html" class="btn btn-outline-success">View event details</a>
+            </div>
+        </div>
+    </div>
+</div>
+                        
+                            
+                            
+                            <div class="event-card card mb-3">
+    <div class="row g-0">
+        <div class="col-md-2">
+            <div class="position-relative">
+                <img src="./img/placeholder.svg" class="event-img img-fluid rounded-start w-100" alt="...">
+                    
+                        <span class="badge badge-virtual">Virtual</span>
+                    
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="card-body">
+                
+                    <a href="/ip-events-edit.html">
+                    <span class="badge badge-edit">Edit</span>
+                    </a>
+                
+                <h3 class="card-title">HealthTech Conference</h3>
+                <p class="date">2024-12-12 9:00 AM - 5:00 PM</p>
+                <address>
+                    <a class="link" target="_blank" href="http://maps.google.com/?q=303 Health Ave, Medical City">303 Health Ave, Medical City</a>
+                </address>
+                <p class="event-description">Join leading experts and innovators in the health technology industry for a day of learning and networking.</p>
+                <a href="/event.html" class="btn btn-outline-success">View event details</a>
+            </div>
+        </div>
+    </div>
+</div>
+                        
+                    </div>
+                </div>
+            </div>
+    </section>
+    
+<footer id="footer">
+    <nav class="navbar">
+        <div class="container position-relative justify-content-center">
+            <a class="navbar-brand" href="/">
+                <img src="/img/footer_logo.png" alt="">
+            </a>
+            <ul id="contacts">
+               <li>
+                   <a href="https://maps.google.com/?q=1188 W Georgia St. Vancouver, BC V6E 4A2">
+                       <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                           <path fill-rule="evenodd" clip-rule="evenodd" d="M13.4593 21.0461L13.4589 21.0464C13.1407 21.362 12.8203 21.6797 12.5 22C12.1803 21.6803 11.8607 21.3634 11.5431 21.0484L11.5409 21.0462L11.5407 21.0461C7.88479 17.4208 4.5 14.0643 4.5 10C4.5 5.58172 8.08172 2 12.5 2C16.9183 2 20.5 5.58172 20.5 10C20.5 14.0643 17.1152 17.4208 13.4593 21.0461ZM12.5 13C14.1569 13 15.5 11.6569 15.5 10C15.5 8.34315 14.1569 7 12.5 7C10.8431 7 9.5 8.34315 9.5 10C9.5 11.6569 10.8431 13 12.5 13Z" fill="#00AB8E"/>
+                       </svg>
+                       #900, 1188 W Georgia St. Vancouver, BC V6E 4A2
+                   </a>
+               </li>
+                <li>
+                   <a href="teL:604.355.2495">
+                       <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                           <path d="M8.88028 8.85335C9.57627 10.303 10.5251 11.6616 11.7266 12.8632C12.9282 14.0648 14.2869 15.0136 15.7365 15.7096C15.8612 15.7694 15.9235 15.7994 16.0024 15.8224C16.2828 15.9041 16.627 15.8454 16.8644 15.6754C16.9313 15.6275 16.9884 15.5704 17.1027 15.4561C17.4523 15.1064 17.6271 14.9316 17.8029 14.8174C18.4658 14.3864 19.3204 14.3864 19.9833 14.8174C20.1591 14.9316 20.3339 15.1064 20.6835 15.4561L20.8783 15.6509C21.4098 16.1824 21.6755 16.4481 21.8198 16.7335C22.1069 17.301 22.1069 17.9713 21.8198 18.5389C21.6755 18.8242 21.4098 19.09 20.8783 19.6214L20.7207 19.779C20.1911 20.3087 19.9263 20.5735 19.5662 20.7757C19.1667 21.0001 18.5462 21.1615 18.088 21.1601C17.6751 21.1589 17.3928 21.0788 16.8284 20.9186C13.795 20.0576 10.9326 18.4332 8.54466 16.0452C6.15668 13.6572 4.53221 10.7948 3.67124 7.76144C3.51103 7.19699 3.43092 6.91477 3.4297 6.50182C3.42833 6.0436 3.58969 5.42311 3.81411 5.0236C4.01636 4.66357 4.28117 4.39876 4.8108 3.86913L4.96843 3.7115C5.49987 3.18006 5.7656 2.91433 6.05098 2.76999C6.61854 2.48292 7.2888 2.48292 7.85636 2.76999C8.14174 2.91433 8.40747 3.18006 8.93891 3.7115L9.13378 3.90637C9.48338 4.25597 9.65819 4.43078 9.77247 4.60655C10.2035 5.26944 10.2035 6.12403 9.77247 6.78692C9.65819 6.96269 9.48338 7.1375 9.13378 7.4871C9.01947 7.60142 8.96231 7.65857 8.91447 7.72538C8.74446 7.96281 8.68576 8.30707 8.76748 8.58743C8.79048 8.66632 8.82041 8.72866 8.88028 8.85335Z" fill="#00AB8E"/>
+                       </svg>
+                       604.355.2495
+                   </a>
+               </li>
+                <li>
+                   <a href="tel:1.800.573.0488">
+                       <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                           <path d="M8.88028 8.85335C9.57627 10.303 10.5251 11.6616 11.7266 12.8632C12.9282 14.0648 14.2869 15.0136 15.7365 15.7096C15.8612 15.7694 15.9235 15.7994 16.0024 15.8224C16.2828 15.9041 16.627 15.8454 16.8644 15.6754C16.9313 15.6275 16.9884 15.5704 17.1027 15.4561C17.4523 15.1064 17.6271 14.9316 17.8029 14.8174C18.4658 14.3864 19.3204 14.3864 19.9833 14.8174C20.1591 14.9316 20.3339 15.1064 20.6835 15.4561L20.8783 15.6509C21.4098 16.1824 21.6755 16.4481 21.8198 16.7335C22.1069 17.301 22.1069 17.9713 21.8198 18.5389C21.6755 18.8242 21.4098 19.09 20.8783 19.6214L20.7207 19.779C20.1911 20.3087 19.9263 20.5735 19.5662 20.7757C19.1667 21.0001 18.5462 21.1615 18.088 21.1601C17.6751 21.1589 17.3928 21.0788 16.8284 20.9186C13.795 20.0576 10.9326 18.4332 8.54466 16.0452C6.15668 13.6572 4.53221 10.7948 3.67124 7.76144C3.51103 7.19699 3.43092 6.91477 3.4297 6.50182C3.42833 6.0436 3.58969 5.42311 3.81411 5.0236C4.01636 4.66357 4.28117 4.39876 4.8108 3.86913L4.96843 3.7115C5.49987 3.18006 5.7656 2.91433 6.05098 2.76999C6.61854 2.48292 7.2888 2.48292 7.85636 2.76999C8.14174 2.91433 8.40747 3.18006 8.93891 3.7115L9.13378 3.90637C9.48338 4.25597 9.65819 4.43078 9.77247 4.60655C10.2035 5.26944 10.2035 6.12403 9.77247 6.78692C9.65819 6.96269 9.48338 7.1375 9.13378 7.4871C9.01947 7.60142 8.96231 7.65857 8.91447 7.72538C8.74446 7.96281 8.68576 8.30707 8.76748 8.58743C8.79048 8.66632 8.82041 8.72866 8.88028 8.85335Z" fill="#00AB8E"/>
+                       </svg>
+                       1.800.573.0488
+                   </a>
+               </li>
+                <li>
+                   <a href="mailto:info@innovatebc.ca">
+                       <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                           <path fill-rule="evenodd" clip-rule="evenodd" d="M3 8.8C3 8.49006 3.00005 8.21245 3.00201 7.96174L8.84192 12.0497L3.05313 17.2783C3.04806 17.2307 3.04342 17.1812 3.03921 17.1297C3.00039 16.6545 3 16.0483 3 15.2V8.8ZM3.04789 6.77319L9.92065 11.5841C9.92643 11.588 9.93215 11.592 9.9378 11.5961L10.9516 12.3058C11.6467 12.7924 11.8892 12.9523 12.1372 13.0142C12.3754 13.0735 12.6246 13.0735 12.8628 13.0142C13.1108 12.9523 13.3533 12.7924 14.0483 12.3058L15.0622 11.5962C15.0678 11.592 15.0736 11.588 15.0794 11.5841L21.9521 6.77319C21.9118 6.35918 21.8405 6.08676 21.7275 5.86502C21.4878 5.39462 21.1054 5.01217 20.635 4.77248C20.3963 4.65089 20.099 4.57756 19.6297 4.53921C19.1545 4.50039 18.5483 4.5 17.7 4.5H7.3C6.45167 4.5 5.84549 4.50039 5.37032 4.53921C4.90099 4.57756 4.60366 4.65089 4.36502 4.77248C3.89462 5.01217 3.51217 5.39462 3.27248 5.86502C3.1595 6.08676 3.08818 6.35918 3.04789 6.77319ZM3.38223 18.3286L9.68243 12.638L10.3782 13.1251L10.4575 13.1806C11.0414 13.5897 11.4443 13.872 11.8953 13.9845C12.2924 14.0834 12.7076 14.0834 13.1047 13.9845C13.5557 13.872 13.9586 13.5897 14.5425 13.1806L14.6218 13.1251L15.3176 12.638L21.6178 18.3286C21.3782 18.7104 21.0391 19.0216 20.635 19.2275C20.3963 19.3491 20.099 19.4224 19.6297 19.4608C19.1545 19.4996 18.5483 19.5 17.7 19.5H7.3C6.45167 19.5 5.84549 19.4996 5.37032 19.4608C4.90099 19.4224 4.60366 19.3491 4.36502 19.2275C3.96094 19.0216 3.62176 18.7104 3.38223 18.3286ZM21.9469 17.2783L16.1581 12.0497L21.998 7.96174C21.9999 8.21245 22 8.49006 22 8.8V15.2C22 16.0483 21.9996 16.6545 21.9608 17.1297C21.9566 17.1812 21.9519 17.2307 21.9469 17.2783Z" fill="#00AB8E"/>
+                       </svg>
+                       info@innovatebc.ca
+                   </a>
+               </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="footer-bottom">
+        © 2024 Innovate BC
+        <a href="/terms">Terms & Conditions</a>
+    </div>
+</footer>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="/js/bootstrap-datetimepicker.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.5.0/js/fileinput.min.js"></script>
+<script src="/js/custom.js"></script>
+</body>
+</html>
