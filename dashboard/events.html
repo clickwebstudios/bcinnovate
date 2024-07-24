@@ -1,0 +1,1390 @@
+<html lang="en">
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.5.0/css/fileinput.min.css" media="all" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="/css/app.css">
+<body>
+<div class="h-100 px-0 bg-light">
+    <div class="d-flex h-100">
+        
+    
+    <aside id="dashboard-sidebar" class="d-flex flex-column">
+        <div id="sidebar-logo">
+            <a href="/"><img src="/img/white-logo.png" class="large_logo" alt="White Logo"></a>
+        </div>
+        <ul id="sidebar-top" class="navbar-items mb-auto">
+            <li>
+                <a href="/dashboard/organizations.html" class="">
+                    <img src="/img/icons/organizations.svg" alt="building logo">
+                    <span>Organizations</span>
+                </a>
+            </li>
+            <li><a href="/dashboard/users.html" class="">
+                    <img src="/img/icons/users.svg" alt="users logo">
+                    <span>Users</span>
+                </a>
+            </li>
+            <li><a href="/dashboard/events.html" class="active">
+                    <img src="/img/icons/events.svg" alt="users logo">
+                    <span>Events</span>
+                </a>
+            </li>
+            <li><a href="/dashboard/ip-programms.html" class="">
+                    <img src="/img/icons/white.svg" alt="users logo">
+                    <span>IP Programs</span>
+                </a>
+            </li>
+            <li><a href="/dashboard/resources.html" class="">
+                    <img src="/img/icons/white.svg" alt="users logo">
+                    <span>Resources</span>
+                </a>
+            </li>
+            <li><a href="/dashboard/service-provides.html" class="">
+                    <img src="/img/icons/service-providers.svg" alt="users logo">
+                    <span>Service Providers</span>
+                </a>
+            </li>
+            <li><a href="/dashboard/users.html" class="">
+                    <img src="/img/icons/assessment.svg" alt="users logo">
+                    <span>Assessment</span>
+                </a>
+            </li>
+        </ul>
+        <ul id="sidebar-bottom" class="navbar-items">
+            <li>
+                <a href="notifications.html" class="position-relative ">
+                    <img src="/img/icons/feedback.svg" alt="building logo">
+                    <span>Feedback</span>
+                </a>
+            </li>
+            <li>
+                <a href="notifications.html" class="position-relative ">
+                    <img src="/img/icons/profile-settings.svg" alt="building logo">
+                    <span>Profile Settings</span>
+                </a>
+            </li>
+
+            <li class="menu-profile">
+                <div class="menu-profile-container btn_action">
+                    <div class="avatar">CW</div>
+                    <div class="profile-info align-items-center">
+                        <span class="name">Cameroner Wil...</span>
+                    </div>
+                    <div class="ms-auto d-flex align-items-center">
+                        <img src="/img/icons/logout.svg" alt="icon logout">
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </aside>
+
+    <div id="dashboard">
+        <div id="topnavbar">
+            <div class="row topnav mb-3">
+                <div class="col-6">
+                    <div class="form-floating mb-4">
+                        <input name="keyword" type="text" class="form-control" id="keyword" placeholder="Search">
+                        <label for="keyword">Search</label>
+                    </div>
+                </div>
+                <div class="col-6 text-end">
+                    <span>
+                        <img src="/img/icons/notifications.svg" alt="">
+                    </span>
+                    <button class="add-event btn btn-success ms-4">
+                        <img class="me-1" src="/img/plus-circle.svg" alt="plus icon">
+                        Add new
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="dashboard-content" class="table-responsive">
+            <table id="table-users" class="table table-borderless">
+                <thead>
+                <tr>
+                    <th scope="col">Event Name</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Address</th>
+                    <th class="text-center" scope="col"></th>
+                </tr>
+                </thead>
+                <tbody>
+                
+                    <tr>
+                        <td>
+                            <div class="status">
+                            
+                                <div class="draft">
+                                    Tech Conference 2024<br>
+                                    <span>Draft</span>
+                                </div>
+
+                            
+                            </div>
+                        </td>
+                        <td>2024-07-15, 10:00 AM - 4:00 PM</td>
+                        <td>
+                            
+                                <span class="badge badge-person">In person</span>
+                            
+                        </td>
+                        <td>123 Innovation Drive, Tech City</td>
+                        <td class="text-end">
+                            <div class="actions">
+                                <div class="dropdown-container ms-auto">
+                                    <span class="btn_action ms-auto">
+                                         <img src="/img/icons/dots.svg" alt="Dots">
+                                    </span>
+                                    <ul class="button-options">
+                                        <li class="view-edit-event">View or edit</li>
+                                        <li class="delete-event text-danger" data-bs-toggle="modal" data-bs-target="#confirm-delete">Delete</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td>
+                            <div class="status">
+                            
+                                <div class="published">Startup Pitch Night</div>
+                            
+                            </div>
+                        </td>
+                        <td>2024-08-05, 6:00 PM - 9:00 PM</td>
+                        <td>
+                            
+                                <span class="badge badge-virtual">Virtual</span>
+                            
+                        </td>
+                        <td>456 Startup Blvd, Entrepreneur Hub</td>
+                        <td class="text-end">
+                            <div class="actions">
+                                <div class="dropdown-container ms-auto">
+                                    <span class="btn_action ms-auto">
+                                         <img src="/img/icons/dots.svg" alt="Dots">
+                                    </span>
+                                    <ul class="button-options">
+                                        <li class="view-edit-event">View or edit</li>
+                                        <li class="delete-event text-danger" data-bs-toggle="modal" data-bs-target="#confirm-delete">Delete</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td>
+                            <div class="status">
+                            
+                                <div class="published">AI Workshop</div>
+                            
+                            </div>
+                        </td>
+                        <td>2024-09-10, 9:00 AM - 3:00 PM</td>
+                        <td>
+                            
+                                <span class="badge badge-person">In person</span>
+                            
+                        </td>
+                        <td>789 AI Lane, Innovation Park</td>
+                        <td class="text-end">
+                            <div class="actions">
+                                <div class="dropdown-container ms-auto">
+                                    <span class="btn_action ms-auto">
+                                         <img src="/img/icons/dots.svg" alt="Dots">
+                                    </span>
+                                    <ul class="button-options">
+                                        <li class="view-edit-event">View or edit</li>
+                                        <li class="delete-event text-danger" data-bs-toggle="modal" data-bs-target="#confirm-delete">Delete</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td>
+                            <div class="status">
+                            
+                                <div class="draft">
+                                    Green Energy Summit<br>
+                                    <span>Draft</span>
+                                </div>
+
+                            
+                            </div>
+                        </td>
+                        <td>2024-10-22, 8:00 AM - 5:00 PM</td>
+                        <td>
+                            
+                                <span class="badge badge-virtual">Virtual</span>
+                            
+                        </td>
+                        <td>101 Renewable Way, Eco City</td>
+                        <td class="text-end">
+                            <div class="actions">
+                                <div class="dropdown-container ms-auto">
+                                    <span class="btn_action ms-auto">
+                                         <img src="/img/icons/dots.svg" alt="Dots">
+                                    </span>
+                                    <ul class="button-options">
+                                        <li class="view-edit-event">View or edit</li>
+                                        <li class="delete-event text-danger" data-bs-toggle="modal" data-bs-target="#confirm-delete">Delete</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td>
+                            <div class="status">
+                            
+                                <div class="published">Blockchain Expo</div>
+                            
+                            </div>
+                        </td>
+                        <td>2024-11-18, 11:00 AM - 6:00 PM</td>
+                        <td>
+                            
+                                <span class="badge badge-person">In person</span>
+                            
+                        </td>
+                        <td>202 Crypto Street, Fintech District</td>
+                        <td class="text-end">
+                            <div class="actions">
+                                <div class="dropdown-container ms-auto">
+                                    <span class="btn_action ms-auto">
+                                         <img src="/img/icons/dots.svg" alt="Dots">
+                                    </span>
+                                    <ul class="button-options">
+                                        <li class="view-edit-event">View or edit</li>
+                                        <li class="delete-event text-danger" data-bs-toggle="modal" data-bs-target="#confirm-delete">Delete</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td>
+                            <div class="status">
+                            
+                                <div class="draft">
+                                    HealthTech Conference<br>
+                                    <span>Draft</span>
+                                </div>
+
+                            
+                            </div>
+                        </td>
+                        <td>2024-12-12, 9:00 AM - 5:00 PM</td>
+                        <td>
+                            
+                                <span class="badge badge-virtual">Virtual</span>
+                            
+                        </td>
+                        <td>303 Health Ave, Medical City</td>
+                        <td class="text-end">
+                            <div class="actions">
+                                <div class="dropdown-container ms-auto">
+                                    <span class="btn_action ms-auto">
+                                         <img src="/img/icons/dots.svg" alt="Dots">
+                                    </span>
+                                    <ul class="button-options">
+                                        <li class="view-edit-event">View or edit</li>
+                                        <li class="delete-event text-danger" data-bs-toggle="modal" data-bs-target="#confirm-delete">Delete</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    </div>
+</div>
+
+<div class="overlay"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="/js/bootstrap-datetimepicker.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.5.0/js/fileinput.min.js"></script>
+<script src="/js/custom.js"></script>
+
+    <div id="drawer-view-org" class="drawer">
+    <div class="drawer-content">
+        <span class="close drawer-close d-none d-lg-flex">
+            <img src="/img/close.svg" alt="close icon">
+        </span>
+        <div class="d-flex justify-content-between">
+            <h4>Facebook Inc.</h4>
+            <span class="btn-save">
+                <span class="close-mobile drawer-close d-lg-none me-4 d-inline-block">Close</span>
+                <button class="btn btn-danger drawer-close" id="save-org">Save changes</button>
+            </span>
+        </div>
+        <nav>
+            <div class="nav nav-tabs"
+                 id="nav-tab"
+                 role="tablist">
+                <button class="nav-link active"
+                        id="nav-details-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#nav-details"
+                        type="button"
+                        role="tab"
+                        aria-controls="nav-details"
+                        aria-selected="true">Organization details</button>
+                <button class="nav-link"
+                        id="nav-org-users-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#nav-org-users"
+                        type="button" role="tab"
+                        aria-controls="nav-org-users"
+                        aria-selected="false">Users</button>
+            </div>
+        </nav>
+        <div class="tab-content" id="nav-orgContent">
+            <div class="tab-pane fade show active"
+                 id="nav-details"
+                 role="tabpanel"
+                 aria-labelledby="nav-details-tab">
+                <form>
+                    <div class="row g-16">
+                        <div class="col-12 col-md-6 mt-0">
+                            <label for="org_name" class="form-label">Organization Name</label>
+                            <input type="text"
+                                   class="form-control"
+                                   id="org_name"
+                                   value="Facebook"
+                                   placeholder="Enter organization name">
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="org_license" class="form-label">Select license</label>
+                            <select id="org_license" class="form-select">
+                                <option>Select license</option>
+                                <option>5 users</option>
+                                <option>10 users</option>
+                                <option selected>20 users</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="org_email" class="form-label">Organization email</label>
+                            <input type="text"
+                                   class="form-control"
+                                   value="info@facebook.com"
+                                   id="org_email"
+                                   placeholder="Enter organization email">
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="org_phone"
+                                   class="form-label">Organization phone number</label>
+                            <input id="org_phone" type="tel" />
+                        </div>
+                    </div>
+                    <div class="row mt-40 g-16">
+                        <div class="col-12 col-md-6">
+                            <label for="org_address_1"
+                                   class="form-label">Address line 1</label>
+                            <input type="text" class="form-control" id="org_address_1" value="882 Diamond Spur, Vinceville, MS 94904" placeholder="Enter organization address">
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="org_address_2" class="form-label">Address line 2</label>
+                            <input type="text" class="form-control" id="org_address_2" placeholder="Enter organization address">
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="org_city" class="form-label">City</label>
+                            <input type="text"
+                                   class="form-control"
+                                   id="org_city"
+                                   value="Port Melvinview" placeholder="Enter organization city">
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="org_state" class="form-label">State or province</label>
+                            <select id="org_state" class="form-select">
+                                <option>Select state or province</option>
+                                <option selected>AB</option>
+                                <option>BC</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="org_zip" class="form-label">ZIP or Postal code</label>
+                            <input type="text" class="form-control"
+                                   id="org_zip"
+                                   value="123123" placeholder="Enter ZIP or postal code">
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="org_country" class="form-label">Country</label>
+                            <select id="org_country" class="form-select">
+                                <option>Select country</option>
+                                <option selected>Unites States</option>
+                                <option>Canada</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mt-40 g-16">
+                        <div class="col-12">
+                            <label for="org_related" class="form-label">Add related organizations</label>
+                            <select id="org_related" class="form-select" multiple>
+                                <option>Meliana</option>
+                                <option selected>Rickard Karstark</option>
+                                <option selected>Baela Targaryen</option>
+                                <option>Tycho Nestoris</option>
+                                <option selected>Wallace Waynwood</option>
+                                <option>Watsica Inc</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+            </div><!--#nav-details-->
+            <div class="tab-pane fade"
+                 id="nav-org-users"
+                 role="tabpanel"
+                 aria-labelledby="nav-org-users-tab">
+                <div class="d-flex justify-content-between">
+                    <nav>
+                        <div class="nav nav-tabs mb-0" id="nav-tab" role="tablist">
+                            <button class="nav-link active" id="nav-view-org-users-tab"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#nav-view-org-users"
+                                    type="button"
+                                    role="tab"
+                                    aria-controls="nav-view-org-users"
+                                    aria-selected="true">All Users</button>
+                            <button class="nav-link"
+                                    id="nav-view-org-users-active-tab"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#nav-view-org-users-active"
+                                    type="button" role="tab"
+                                    aria-controls="nav-view-org-users-active"
+                                    aria-selected="false">Active</button>
+                            <button class="nav-link"
+                                    id="nav-view-org-users-disabled-tab"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#nav-view-org-users-disabled"
+                                    type="button" role="tab"
+                                    aria-controls="nav-view-org-users-disabled"
+                                    aria-selected="false">Disabled</button>
+                        </div>
+                    </nav>
+                    <span>
+                        <button class="btn btn-danger add-org-user">Add new user<img class="ms-3" src="/img/plus.svg" alt="plus icon"></button>
+                    </span>
+                </div>
+                <div class="tab-content" id="nav-usersContent">
+                    <div class="tab-pane fade show active"
+                         id="nav-view-org-users"
+                         role="tabpanel"
+                         aria-labelledby="nav-view-org-users-tab">
+                        <table id="table-users" class="table table-borderless">
+                            <thead>
+                            <tr>
+                                <th scope="col">Status</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Role</th>
+                                <th scope="col">Sign Up Date</th>
+                                <th class="text-center" scope="col"></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <span class="badge rounded-pill text-bg-danger">Disabled</span>
+                                </td>
+                                <td>Yetta Strosin</td>
+                                <td>tammi.rodriquez@example.com</td>
+                                <td>Role 1</td>
+                                <td>Sept 20, 2020</td>
+                                <td class="text-end">
+                                    <button class="btn btn-danger btn-view">View</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="badge rounded-pill text-bg-success">Active</span>
+                                </td>
+                                <td>Clark Rempel</td>
+                                <td>carol.anderson@example.com</td>
+                                <td>Role 2</td>
+                                <td>Sept 20, 2020</td>
+                                <td class="text-end">
+                                    <button class="btn btn-danger btn-view">View</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="badge rounded-pill text-bg-success">Active</span>
+                                </td>
+                                <td>Clark Rempel</td>
+                                <td>carol.anderson@example.com</td>
+                                <td>Role 2</td>
+                                <td>Sept 20, 2020</td>
+                                <td class="text-end">
+                                    <button class="btn btn-danger btn-view">View</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="badge rounded-pill text-bg-success">Active</span>
+                                </td>
+                                <td>Clark Rempel</td>
+                                <td>carol.anderson@example.com</td>
+                                <td>Role 2</td>
+                                <td>Sept 20, 2020</td>
+                                <td class="text-end">
+                                    <button class="btn btn-danger btn-view">View</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="badge rounded-pill text-bg-success">Active</span>
+                                </td>
+                                <td>Clark Rempel</td>
+                                <td>carol.anderson@example.com</td>
+                                <td>Role 2</td>
+                                <td>Sept 20, 2020</td>
+                                <td class="text-end">
+                                    <button class="btn btn-danger btn-view">View</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="badge rounded-pill text-bg-secondary">Invited</span>
+                                </td>
+                                <td>Miss Riley Bayer</td>
+                                <td>annmarie.miles@example.com</td>
+                                <td>Role 2</td>
+                                <td>Sept 20, 2020</td>
+                                <td class="text-end">
+                                    <button class="btn btn-danger btn-view">View</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="badge rounded-pill text-bg-secondary">Invited</span>
+                                </td>
+                                <td>Miss Riley Bayer</td>
+                                <td>annmarie.miles@example.com</td>
+                                <td>Role 2</td>
+                                <td>Sept 20, 2020</td>
+                                <td class="text-end">
+                                    <button class="btn btn-danger btn-view">View</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="badge rounded-pill text-bg-secondary">Invited</span>
+                                </td>
+                                <td>Miss Riley Bayer</td>
+                                <td>annmarie.miles@example.com</td>
+                                <td>Role 2</td>
+                                <td>Sept 20, 2020</td>
+                                <td class="text-end">
+                                    <button class="btn btn-danger btn-view">View</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="badge rounded-pill text-bg-danger">Disabled</span>
+                                </td>
+                                <td>Miss Riley Bayer</td>
+                                <td>annmarie.miles@example.com</td>
+                                <td>Role 2</td>
+                                <td>Sept 20, 2020</td>
+                                <td class="text-end">
+                                    <button class="btn btn-danger btn-view">View</button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <span class="badge rounded-pill text-bg-danger">Disabled</span>
+                                </td>
+                                <td>Miss Riley Bayer</td>
+                                <td>annmarie.miles@example.com</td>
+                                <td>Role 2</td>
+                                <td>Sept 20, 2020</td>
+                                <td class="text-end">
+                                    <button class="btn btn-danger btn-view">View</button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div><!--#nav-users-->
+                    <div class="tab-pane fade" id="nav-view-org-users-active" role="tabpanel" aria-labelledby="nav-view-org-users-active-tab">
+                        <table id="table-users-active" class="table table-borderless">
+                            <thead>
+                            <tr>
+                                <th scope="col">Status</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Role</th>
+                                <th scope="col">Sign Up Date</th>
+                                <th class="text-center" scope="col"></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <span class="badge rounded-pill text-bg-success">Active</span>
+                                </td>
+                                <td>Yetta Strosin</td>
+                                <td>tammi.rodriquez@example.com</td>
+                                <td>Role 1</td>
+                                <td>Sept 20, 2020</td>
+                                <td class="text-end">
+                                    <button class="btn btn-danger btn-view">View</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="badge rounded-pill text-bg-success">Active</span>
+                                </td>
+                                <td>Yetta Strosin</td>
+                                <td>tammi.rodriquez@example.com</td>
+                                <td>Role 1</td>
+                                <td>Sept 20, 2020</td>
+                                <td class="text-end">
+                                    <button class="btn btn-danger btn-view">View</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="badge rounded-pill text-bg-success">Active</span>
+                                </td>
+                                <td>Yetta Strosin</td>
+                                <td>tammi.rodriquez@example.com</td>
+                                <td>Role 1</td>
+                                <td>Sept 20, 2020</td>
+                                <td class="text-end">
+                                    <button class="btn btn-danger btn-view">View</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="badge rounded-pill text-bg-success">Active</span>
+                                </td>
+                                <td>Yetta Strosin</td>
+                                <td>tammi.rodriquez@example.com</td>
+                                <td>Role 1</td>
+                                <td>Sept 20, 2020</td>
+                                <td class="text-end">
+                                    <button class="btn btn-danger btn-view">View</button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div><!--#nav-details-->
+                    <div class="tab-pane fade" id="nav-view-org-users-disabled" role="tabpanel" aria-labelledby="nav-view-org-users-disabled-tab"><!--#nav-users-disabled-->
+                        <table id="table-users-disabled" class="table table-borderless">
+                            <thead>
+                            <tr>
+                                <th scope="col">Status</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Role</th>
+                                <th scope="col">Sign Up Date</th>
+                                <th class="text-center" scope="col"></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <span class="badge rounded-pill text-bg-danger">Disabled</span>
+                                    </td>
+                                    <td>Miss Riley Bayer</td>
+                                    <td>annmarie.miles@example.com</td>
+                                    <td>Role 2</td>
+                                    <td>Sept 20, 2020</td>
+                                    <td class="text-end">
+                                        <button class="btn btn-danger btn-view">View</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="badge rounded-pill text-bg-danger">Disabled</span>
+                                    </td>
+                                    <td>Miss Riley Bayer</td>
+                                    <td>annmarie.miles@example.com</td>
+                                    <td>Role 2</td>
+                                    <td>Sept 20, 2020</td>
+                                    <td class="text-end">
+                                        <button class="btn btn-danger btn-view">View</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="badge rounded-pill text-bg-danger">Disabled</span>
+                                    </td>
+                                    <td>Miss Riley Bayer</td>
+                                    <td>annmarie.miles@example.com</td>
+                                    <td>Role 2</td>
+                                    <td>Sept 20, 2020</td>
+                                    <td class="text-end">
+                                        <button class="btn btn-danger btn-view">View</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div><!--#nav-details-->
+                </div><!--#nav-users-->
+            </div>
+        </div>
+    </div>
+</div><!--#drawer-add-org-->
+
+    <div id="drawer-view-org-user" class="drawer">
+    <div class="drawer-content">
+        <span class="close drawer-close">
+            <img src="/img/close.svg" alt="close icon">
+        </span>
+        <span id="arrow-back" class="mb-4">
+            <img src="/img/arrow-left.svg" alt="arrow icon">
+            Back to all users
+        </span>
+        <div class="d-flex justify-content-between">
+            <h4>User details</h4>
+        </div>
+        <form>
+            <div class="row user-row g-16">
+                <div class="col-md-6">
+                    <label for="inputPassword4" class="form-label">Organization Name</label>
+                    <select id="inputState" class="form-select" disabled>
+                        <option>Select organization</option>
+                        <option selected>Meliana</option>
+                        <option>Rickard Karstark</option>
+                        <option>Baela Targaryen</option>
+                        <option>Tycho Nestoris</option>
+                        <option>Wallace Waynwood</option>
+                        <option>Watsica Inc</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label for="inputPassword4" class="form-label">Role</label>
+                    <select id="inputState" class="form-select" disabled>
+                        <option>Select role</option>
+                        <option selected>Manager</option>
+                        <option>User</option>
+                    </select>
+                </div>
+                <div class="col-12 col-md-6">
+                    <label for="inputZip" class="form-label">First name</label>
+                    <input type="text"
+                           disabled
+                           class="form-control"
+                           id="inputZip"
+                           value="James"
+                           placeholder="Enter user first name">
+                </div>
+                <div class="col-12 col-md-6">
+                    <label for="inputZip" class="form-label">Last name</label>
+                    <input type="text"
+                           disabled
+                           class="form-control"
+                           id="inputZip"
+                           value="Keebler"
+                           placeholder="Enter user last name">
+                </div>
+                <div class="col-12 col-md-6">
+                    <label for="inputAddress" class="form-label">Title</label>
+                    <select id="inputState" class="form-select" disabled>
+                        <option>Select title</option>
+                        <option selected>Mr</option>
+                        <option>Ms</option>
+                    </select>
+                </div>
+                <div class="col-12 col-md-6">
+                    <label for="inputCity" class="form-label">Department</label>
+                    <select id="inputState" class="form-select" disabled>
+                        <option>Select department</option>
+                        <option>Accounting</option>
+                        <option selected>Technical</option>
+                    </select>
+                </div>
+                <div class="col-12">
+                    <label for="inputZip" class="form-label">Email address</label>
+                    <input type="email"
+                           disabled
+                           class="form-control"
+                           id="inputZip"
+                           value="delmar.shaw@example.com"
+                           placeholder="Enter user email address">
+                </div>
+                <div class="col-md-4">
+                    <label for="inputState2" class="form-label">Phone number</label>
+                    <input id="user-phone" class="phone" type="tel" disabled />
+                </div>
+                <div class="col-md-2">
+                    <label for="inputZip" class="form-label">Phone Extension</label>
+                    <input type="text"
+                           class="form-control"
+                           disabled
+                           id="inputZip"
+                           placeholder="Enter user phone extension">
+                </div>
+                <div class="col-md-6">
+                    <label for="inputState4" class="form-label">Mobile phone number</label>
+                    <input id="user-mobile" class="phone" type="tel" disabled />
+                </div>
+            </div>
+        </form>
+    </div>
+</div><!--#drawer-view-user-->
+
+    <div id="drawer-add-org" class="drawer">
+    <div class="drawer-content">
+        <span class="close drawer-close d-none d-lg-flex">
+            <img src="/img/close.svg" alt="close icon">
+        </span>
+        <div class="d-flex justify-content-between">
+            <h4>Add new organization and users</h4>
+            <div class="btn-save">
+                <span class="close-mobile drawer-close d-lg-none me-4 d-inline-block">Close</span>
+                <span>
+                    <span id="tab-org-details">
+                        <button class="btn btn-danger" id="next-tab-user">Continue</button>
+                    </span>
+                    <span id="tab-org-users" class="d-none">
+                        <button class="btn btn-danger drawer-close" id="submit-org">Submit</button>
+                    </span>
+                </span>
+            </div>
+        </div>
+        <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <button class="nav-link active" id="nav-details-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#nav-details"
+                        type="button"
+                        role="tab"
+                        aria-controls="nav-details"
+                        aria-selected="true">Organization details</button>
+                <button class="nav-link"
+                        id="nav-users-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#nav-users"
+                        type="button" role="tab"
+                        aria-controls="nav-users"
+                        aria-selected="false">Users</button>
+            </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-details" role="tabpanel" aria-labelledby="nav-details-tab">
+                <form>
+                    <div class="row g-16">
+                        <div class="col-md-6 mt-0">
+                            <label for="inputAddress" class="form-label">Organization Name</label>
+                            <input type="text" class="form-control" id="inputAddress" placeholder="Enter organization name">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputPassword4" class="form-label">Select license</label>
+                            <select id="inputState" class="form-select">
+                                <option selected>Select license</option>
+                                <option>5 users</option>
+                                <option>10 users</option>
+                                <option>20 users</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputAddress" class="form-label">Organization email</label>
+                            <input type="text" class="form-control" id="inputAddress" placeholder="Enter organization email">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputPassword4" class="form-label">Organization phone number</label>
+                            <input id="org-phone" type="tel" />
+                        </div>
+                    </div>
+                    <div class="row mt-40 g-16">
+                        <div class="col-md-6">
+                            <label for="inputEmail4" class="form-label">Address line 1</label>
+                            <input type="text" class="form-control" id="inputEmail4" placeholder="Enter organization address">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputEmail4" class="form-label">Address line 2</label>
+                            <input type="text" class="form-control" id="inputEmail4" placeholder="Enter organization address">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputPassword4" class="form-label">City</label>
+                            <input type="text" class="form-control" id="inputEmail4" placeholder="Enter organization city">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputPassword4" class="form-label">State or province</label>
+                            <select id="inputState" class="form-select">
+                                <option selected>Select state or province</option>
+                                <option>AB</option>
+                                <option>BC</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputEmail4" class="form-label">ZIP or Postal code</label>
+                            <input type="text" class="form-control" id="inputEmail4" placeholder="Enter ZIP or postal code">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputPassword4" class="form-label">Country</label>
+                            <select id="inputState" class="form-select">
+                                <option selected>Select country</option>
+                                <option>Unites States</option>
+                                <option>Canada</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mt-40 g-16">
+                        <div class="col-12">
+                            <label for="inputPassword4" class="form-label">Add related organizations</label>
+                            <select id="inputState" class="form-select" multiple>
+                                <option>Meliana</option>
+                                <option>Rickard Karstark</option>
+                                <option>Baela Targaryen</option>
+                                <option>Tycho Nestoris</option>
+                                <option>Wallace Waynwood</option>
+                                <option>Watsica Inc</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+            </div><!--#nav-details-->
+            <div class="tab-pane fade"
+                 id="nav-users"
+                 role="tabpanel"
+                 aria-labelledby="nav-users-tab">
+                <form>
+                    <div class="row user-row g-16">
+                        <div class="col-md-12 mt-0">
+                            <label for="inputPassword4" class="form-label">Role</label>
+                            <select id="inputState" class="form-select">
+                                <option>Select role</option>
+                                <option>Manager</option>
+                                <option>User</option>
+                            </select>
+                        </div>
+                        <div class="col-6">
+                            <label for="inputAddress" class="form-label">First name</label>
+                            <input type="text" class="form-control" id="inputAddress" placeholder="Enter first name">
+                        </div>
+                        <div class="col-6">
+                            <label for="inputAddress2" class="form-label">Last name</label>
+                            <input type="text" class="form-control" id="inputAddress2" placeholder="Enter last name">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputPassword4" class="form-label">Title</label>
+                            <select id="inputState" class="form-select">
+                                <option>Mr</option>
+                                <option>Ms</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputState" class="form-label">Department</label>
+                            <select id="inputState" class="form-select">
+                                <option selected>Select department</option>
+                                <option>Accounting</option>
+                                <option>Technical</option>
+                            </select>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="inputZip" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="inputZip" placeholder="Enter email address">
+                            <div id="emailHelp" class="form-text">We will send an invitation to join to this user's email.</div>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="inputState2" class="form-label">Phone number</label>
+                            <input id="user-phone" class="user-phone" type="tel" />
+                        </div>
+                        <div class="col-md-2">
+                            <label for="inputZip" class="form-label">Phone Extension</label>
+                            <input type="text" class="form-control" id="inputZip" placeholder="Enter user phone extension">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputState4" class="form-label">Mobile phone number</label>
+                            <input id="user-mobile" class="user-mobile" type="tel" />
+                        </div>
+                        <div class="col-12 divider">
+                            <hr>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <button type="button" class="btn btn-danger add-new-user">Add another user</button>
+                        </div>
+                    </div>
+                </form>
+            </div><!--#nav-users-->
+        </div>
+    </div>
+</div><!--#drawer-add-org-->
+
+    <div id="drawer-add-user" class="drawer">
+    <div class="drawer-content">
+        <span class="close drawer-close d-none d-lg-flex">
+            <img src="/img/close.svg" alt="close icon">
+        </span>
+        <div class="d-flex justify-content-between">
+            <h4>Add new user</h4>
+            <span class="btn-save">
+                <span class="close-mobile drawer-close d-lg-none me-4 d-inline-block">Close</span>
+                <button class="btn btn-danger drawer-close" id="submit-user">Submit</button>
+            </span>
+        </div>
+        <form>
+            <div class="row user-row g-16">
+                <div class="col-md-6">
+                    <label for="rel_org" class="form-label">Add related organizations</label>
+                    <select id="inputState" class="form-select">
+                        <option>Select organization</option>
+                        <option>Meliana</option>
+                        <option>Rickard Karstark</option>
+                        <option>Baela Targaryen</option>
+                        <option>Tycho Nestoris</option>
+                        <option>Wallace Waynwood</option>
+                        <option>Watsica Inc</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label for="user_role" class="form-label">Role</label>
+                    <select id="user_role" class="form-select">
+                        <option>Select role</option>
+                        <option>Manager</option>
+                        <option>User</option>
+                    </select>
+                </div>
+                <div class="col-6">
+                    <label for="user_fname" class="form-label">First name</label>
+                    <input type="text" class="form-control" id="user_fname" placeholder="Enter user first name">
+                </div>
+                <div class="col-6">
+                    <label for="user_lname" class="form-label">Last name</label>
+                    <input type="text" class="form-control" id="user_lname" placeholder="Enter user last name">
+                </div>
+                <div class="col-6">
+                    <label for="user_title" class="form-label">Title</label>
+                    <select id="user_title" class="form-select">
+                        <option>Select title</option>
+                        <option>Mr</option>
+                        <option>Ms</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label for="user_dep" class="form-label">Department</label>
+                    <select id="user_dep" class="form-select">
+                        <option>Select department</option>
+                        <option>Accounting</option>
+                        <option>Technical</option>
+                    </select>
+                </div>
+                <div class="col-12">
+                    <label for="user_email" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="user_email" placeholder="Enter user email address">
+                </div>
+                <div class="col-md-4">
+                    <label for="user_phone" class="form-label">Phone number</label>
+                    <input id="user_phone" class="phone" type="tel" />
+                </div>
+                <div class="col-md-2">
+                    <label for="user_phone_ext" class="form-label">Phone Extension</label>
+                    <input type="text" class="form-control" id="user_phone_ext" placeholder="Enter user phone extension">
+                </div>
+                <div class="col-md-6">
+                    <label for="user_mobile" class="form-label">Mobile phone number</label>
+                    <input id="user_mobile" class="phone" type="tel" />
+                </div>
+                <div class="col-12 divider">
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <button type="button" class="btn btn-danger add-new-user">Add another user</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div><!--#drawer-add-user-->
+
+        
+<div id="drawer-add-event" class="drawer">
+    <div class="d-flex justify-content-between">
+        <h4>Create new event</h4>
+    </div>
+    <div class="drawer-content">
+         <span class="close drawer-close">
+            <img src="/img/close.svg" alt="close icon">
+        </span>
+        <div class="drawer-form-outer">
+
+        <form action="">
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-floating mb-4">
+                        <input name="event-name" type="text" class="form-control" id="event-name" placeholder="Event Name">
+                        <label for="event-name">Event Name</label>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-floating mb-4">
+                        <input name="event-subtitle" type="text" class="form-control" id="event-subtitle" placeholder="Event Subtitle">
+                        <label for="event-subtitle">Event Subtitle</label>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <select class="form-select mb-4" aria-label="Event Type">
+                        <option selected>Event Type</option>
+                        <option value="Virtual">Virtual</option>
+                        <option value="In Person">In Person</option>
+                    </select>
+                </div>
+                <div class="col-12">
+                    <div class="form-floating mb-4">
+                        <input name="event-date" type="datetime-local" class="form-control" id="event-date" placeholder="Event Date and Time">
+                        <label for="event-date">Event Date and Time</label>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-floating mb-4">
+                        <input name="event-location" type="text" class="form-control" id="event-location" placeholder="Event Location">
+                        <label for="event-location">Event Location</label>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <input id="input-id" name="input-name" type="file" style="display:none;">
+                </div>
+                <div class="col-md-8">
+                    <div class="form-floating mb-4">
+                        <textarea name="event-description" class="form-control" placeholder="Event Description" id="event-description">
+
+                        </textarea>
+                        <label for="event-description">Event Description</label>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-floating mb-4">
+                        <textarea name="agenda" class="form-control" placeholder="Agenda" id="agenda"></textarea>
+                        <label for="agenda">Agenda</label>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-floating mb-4">
+                        <input name="speakers" type="text" class="form-control" id="speakers" placeholder="Speakers (separated by comma)">
+                        <label for="speakers">Speakers (separated by comma)</label>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-floating">
+                        <input name="event-link" type="url" class="form-control" id="event-link" placeholder="Event link">
+                        <label for="event-link">Event link</label>
+                    </div>
+                </div>
+                <div class="form-footer col-12">
+                    <div class="d-flex justify-content-between">
+                        <button class="link">Save as a Draft</button>
+                        <div>
+                            <button type="button" class="btn btn-outline-success" onclick="window.location ='/ip-events-admin.html'">Cancel</button>
+                            <button type="submit" class="btn btn-success">Save and publish <img src="/img/arrow-right.svg" alt="Arrow Right"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        </div>
+    </div>
+</div><!--#drawer-add-event-->
+
+        
+<div id="drawer-view-edit-event" class="drawer">
+    <div class="d-flex justify-content-between">
+        <h4>Edit event</h4>
+    </div>
+    <div class="drawer-content">
+         <span class="close drawer-close">
+            <img src="/img/close.svg" alt="close icon">
+        </span>
+        <div class="drawer-form-outer">
+        <form action="">
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-floating mb-4">
+                        <input value="Tech Conference 2024" name="event-name" type="text" class="form-control" id="event-name" placeholder="Event Name">
+                        <label for="event-name">Event Name</label>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-floating mb-4">
+                        <input name="event-subtitle" value="Event subtitle" type="text" class="form-control" id="event-subtitle" placeholder="Event Subtitle">
+                        <label for="event-subtitle">Event Subtitle</label>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <select class="form-select mb-4" aria-label="Event Type">
+                        <option>Event Type</option>
+                        <option value="Virtual">Virtual</option>
+                        <option value="In Person" selected>In Person</option>
+                    </select>
+                </div>
+                <div class="col-12">
+                    <div class="form-floating mb-4">
+                        <input name="event-date" value="2023-07-21T14:30" type="datetime-local" class="form-control" id="event-date" placeholder="Event Date and Time">
+                        <label for="event-date">Event Date and Time</label>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-floating mb-4">
+                        <input name="event-location" value="123 Innovation Drive, Tech City" type="text" class="form-control" id="event-location" placeholder="Event Location">
+                        <label for="event-location">Event Location</label>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <input id="input-id" name="input-name" type="file" style="display:none;">
+                </div>
+                <div class="col-md-8">
+                    <div class="form-floating mb-4">
+                        <textarea name="event-description" class="form-control" placeholder="Event Description" id="event-description">
+                            Have an idea for commercialization? Working on a new invention? Join Michael Damiani, Patent Lawyer from Borden Ladner Gervais in an interactive session on how to best utilize your IP for your business and the different ways to protect it.
+                        </textarea>
+                        <label for="event-description">Event Description</label>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-floating mb-4">
+                        <textarea name="agenda" class="form-control" placeholder="Agenda" id="agenda"></textarea>
+                        <label for="agenda">Agenda</label>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-floating mb-4">
+                        <input name="speakers" type="text" class="form-control" id="speakers" placeholder="Speakers (separated by comma)">
+                        <label for="speakers">Speakers (separated by comma)</label>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-floating">
+                        <input name="event-link" value="/event.html" type="url" class="form-control" id="event-link" placeholder="Event link">
+                        <label for="event-link">Event link</label>
+                    </div>
+                </div>
+                <div class="form-footer col-12">
+                    <div class="d-flex justify-content-between">
+                        <button class="link">Save as a Draft</button>
+                        <div>
+                            <button type="button" class="btn btn-outline-success" onclick="window.location ='/ip-events-admin.html'">Cancel</button>
+                            <button type="submit" class="btn btn-success">Save and publish <img src="/img/arrow-right.svg" alt="Arrow Right"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        </div>
+    </div>
+</div><!--#drawer-add-user-->
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3 top-0">
+    <div id="success-toast" class="toast text-bg-success" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <strong class="me-auto">Success</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body"></div>
+    </div>
+</div>
+    <div class="modal fade" id="confirm-delete" tabindex="-1" aria-labelledby="addCommentsLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="addCommentsLabel">Delete event</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    &times;
+                </button>
+            </div>
+            <div class="modal-body">
+                <p class="text-center m-0">Are sure you want delete event?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-primary me-auto" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-danger ms-4" data-bs-dismiss="modal">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+    <script>
+
+        $('.add-new-user').click(function() {
+            const button = $(this);
+            const clone = button.parents('form');
+            addNewUserRow(clone);
+        });
+        $('#add-org-new-user').click(function() {
+            addNewOrgUserRow();
+        });
+        $('.add-org-user').click(function() {
+            $('#drawer-add-org-user').toggleClass('active');
+            $('.overlay').addClass('active');
+        });
+        $('.view-edit-event').click(function() {
+            $('#drawer-view-edit-event').toggleClass('active');
+            $('.dropdown-container').removeClass("active");
+            $('.overlay').addClass('active');
+        });
+        $('.add-event').click(function() {
+            $('#drawer-add-event').toggleClass('active');
+            $('.overlay').addClass('active');
+        });
+        $('.delete-event').click(function() {
+            $('.dropdown-container').removeClass("active");
+        });
+        $('#submit-user').click(function() {
+            showSuccessToast('New user successfully created');
+        });
+        $('#submit-org').click(function() {
+            showSuccessToast('Organization and user successfully created');
+        });
+        $('#save-org').click(function() {
+            showSuccessToast('Changes successfully saved');
+        });
+        $('#submit-org-user').click(function() {
+            showSuccessToast('User(s) successfully added');
+            $('#drawer-add-org-user').removeClass('active');
+        });
+
+        $('#table-org  .btn-view').click(function(){
+            $('#drawer-view-org').toggleClass('active');
+            $('.overlay').addClass('active');
+        })
+
+        $('#drawer-view-org  #nav-usersContent .btn-view').click(function(){
+            $('#drawer-view-org-user').toggleClass('active');
+        })
+
+
+        $('#next-tab-user').click(function() {
+            $('#drawer-add-org .tab-pane').removeClass('active show');
+            $('#drawer-add-org .nav-link').removeClass('active');
+            $('#drawer-add-org #nav-users').addClass('active show');
+            $('#drawer-add-org #nav-users-tab').addClass('active');
+            $('#tab-org-details').addClass('d-none');
+            $('#tab-org-users').removeClass('d-none');
+        })
+        $('#drawer-add-org #nav-details-tab').click(function(){
+            $('#drawer-add-org #nav-details').addClass('active show');
+            $('#drawer-add-org #nav-users').removeClass('active show');
+            $('#tab-org-details').removeClass('d-none');
+            $('#tab-org-users').addClass('d-none');
+        });
+        $('#drawer-add-org #nav-users-tab').click(function(){
+            $('#drawer-add-org #nav-details').removeClass('active show');
+            $('#drawer-add-org #nav-users').addClass('active show');
+            $('#tab-org-details').addClass('d-none');
+            $('#tab-org-users').removeClass('d-none');
+        });
+        $('#arrow-back').click(function() {
+            $('#drawer-view-org-user').removeClass('active')
+        });
+    </script>
+
+</body>
+</html>

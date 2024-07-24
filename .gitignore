@@ -1,6 +1,5 @@
-dashboard/
 layouts/
 macros/
 partials/
-DS_Store
+.DS_Store
 .idea

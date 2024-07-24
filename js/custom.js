@@ -33,4 +33,18 @@ jQuery(document).ready(function($) {
                 '<div class="kv-upload-progress kv-hidden"></div>\n',
         }
     });
+    $(".btn_action").click(function() {
+        $(this).closest('.dropdown-container').toggleClass("active");
+    });
+    $('.drawer-close').click(function(){
+        $('.drawer').removeClass('active');
+        $('.overlay').removeClass('active');
+    })
 });
+
+function showSuccessToast(message = 'Success') {
+    const toastSuccess = $('#success-toast');
+    const toast = new bootstrap.Toast(toastSuccess)
+    $('#success-toast .toast-body').text(message);
+    toast.show()
+}
